@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="contactApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="contact.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Contact List</h1>
+      <div ng-controller="ContactController" ng-model="contacts">
+      	<ul>
+      		<li ng-repeat="contact in contacts">
+      			<p>{{contact.name}}</p>
+      			<p>{{contact.job}}</p>
+      			<p>{{contact.company_name}}</p>
+      			<p>{{contact.phone}}</p>
+      			<img src="{{contact.profile_image}}" width="100" height="100"/>
+      			<img src="{{contact.icon}}" width="30" height="30"/>
+      		</li>
+      	</ul>
+      </div>
+    </div>
+  </body>
+</html>
