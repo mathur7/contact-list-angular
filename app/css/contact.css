@@ -1,0 +1,83 @@
+.testing {
+  width: 71.42857143%;
+}
+.navbar-custom {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+.navbar-text-wrapper {
+  margin-left: 12%;
+}
+.form-control.input-width {
+  width: 290px;
+}
+.content-wrapper {
+  background-color: #efefef;
+}
+.contacts-list-wrapper {
+  list-style-type: none;
+  padding-top: 30px;
+}
+.custom-height {
+  height: 230px;
+  padding: 8px;
+}
+.contact-name {
+  font-weight: 600;
+  font-family: helvetica;
+  font-size: 12px;
+  line-height: 2em;
+}
+.contact-info {
+  float: left;
+}
+.contact-photo {
+  height: 142px;
+  width: 100%;
+  display: block;
+}
+.contact-item {
+  cursor: pointer;
+}
+.contact-item:hover .contact-details {
+  display: block;
+  font-size: 10px;
+}
+.contact-item:hover .contact-photo {
+  height: 100px;
+  margin-top: 0;
+}
+.contact-item:hover .text-container {
+  top: 58%;
+}
+.contact-item:hover .thumbnail {
+  box-shadow: 0px 0px 2px 2px #ccc;
+}
+.contact-item:hover .contact-name-job-wrapper {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.contact-details {
+  display: none;
+}
+.contact-icon {
+  float: left;
+  position: relative;
+  left: 5px;
+  margin-top: -20px;
+  border-radius: 100px;
+}
+.img-container {
+  margin: 5px 5px 5px 3px;
+}
+.contact-job-info {
+  font-size: 10px;
+  margin-top: -5px;
+}
+.text-container {
+  position: absolute;
+  top: 70%;
+  width: 81%;
+  word-break: break-word;
+  padding: 0 3px;
+}
