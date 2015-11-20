@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="contactApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="contact.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
+  <body>
+	    <nav class="navbar navbar-default navbar-custom">
+	      <div class="container-fluid col-md-8 col-sm-offset-2">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Contact List</a>
+	        </div>
+	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	          <form class="col-md-4 navbar-form navbar-right" role="search">
+	            <div class="form-group">
+	              <input type="text" class="form-control input-width" placeholder="Search">
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </nav>
+	    <div class="container-fluid content-wrapper">
+		    <div class="row" ng-controller="ContactController" ng-model="contacts">
+		    	<ul class="contacts-list-wrapper col-md-8 col-sm-6 col-sm-offset-2 col-xs-12">
+		    		<li ng-repeat="contact in contacts" class="contact-item col-xs-6 col-sm-6 col-md-3">
+		    			<div class="thumbnail custom-height">
+		    				<div class="contact-info img-container">
+			    			  <img src="{{contact.profile_image}}" class="contact-photo"/>
+			    			</div>
+			    			<img src="{{contact.icon}}" class="contact-icon" width="35" height="35"/>
+			    			<div class="contact-info text-container">
+			    				<div class="contact-name-job-wrapper">
+					    			<div class="contact-name">{{contact.name}}</div>
+					    			<div class="contact-job-info" ng-if="contact.job !== '' && contact.company_name !== ''">{{contact.job}} | @{{contact.company_name}}</div>
+					    			<div class="contact-job-info" ng-if="contact.job === '' && contact.company_name !== ''">{{contact.company_name}}</div>
+					    			<div class="contact-job-info" ng-if="contact.company_name === '' && contact.job !== ''">{{contact.job}}</div>
+					    		</div>
+				    			<div class="contact-details">
+					    			<div ng-if="contact.phone !== '' || contact.email !== ''">Phone Number: {{contact.phone}} {{contact.email}}</div>
+				    			</div>
+				    		</div>
+			    		</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		  </div>
+	  
+	</body>
+</html>
