@@ -6,7 +6,7 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/contact.css">
   </head>
-  <body>
+  <body ng-controller="ContactController">
 	    <nav class="navbar navbar-default navbar-custom">
 	      <div class="container-fluid col-md-8 col-sm-offset-2">
 	        <div class="navbar-header">
@@ -21,16 +21,16 @@
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 	          <form class="col-md-4 navbar-form navbar-right" role="search">
 	            <div class="form-group">
-	              <input type="text" class="form-control input-width" placeholder="Search">
+	              <input type="text" class="form-control input-width" placeholder="Search" ng-model="query">
 	            </div>
 	          </form>
 	        </div>
 	      </div>
 	    </nav>
 	    <div class="container-fluid content-wrapper">
-		    <div class="row" ng-controller="ContactController" ng-model="contacts">
+		    <div class="row" ng-model="contacts">
 		    	<ul class="contacts-list-wrapper col-md-8 col-sm-6 col-sm-offset-2 col-xs-12">
-		    		<li ng-repeat="contact in contacts" class="contact-item col-xs-6 col-sm-6 col-md-3">
+		    		<li ng-repeat="contact in contacts | filter:query" class="contact-item col-xs-6 col-sm-6 col-md-3">
 		    			<div class="thumbnail custom-height">
 		    				<div class="contact-info img-container">
 			    			  <img src="{{contact.profile_image}}" class="contact-photo"/>
