@@ -3,17 +3,14 @@
   "version": "0.0.0",
   "description": "coding challenge for honeybook",
   "main": "app/contact.js",
-  "dependencies": {
-    "http-server": "^0.8.5"
-  },
   "devDependencies": {
+    "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.1.0",
-    "install": "^0.3.0",
-    "npm": "^3.4.1"
+    "gulp-sass": "^2.1.0"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "gulp watch"
   },
   "repository": {
     "type": "git",
