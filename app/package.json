@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-less": "^3.0.5"
+    "gulp-sass": "^2.1.0",
+    "install": "^0.3.0",
+    "npm": "^3.4.1"
   },
   "scripts": {
     "test": "test"
