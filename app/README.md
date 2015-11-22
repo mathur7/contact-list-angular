@@ -1,3 +1,4 @@
 # steps to get app up and running
-- run npm install
+- cd app
+- npm install
 - gulp watch 
